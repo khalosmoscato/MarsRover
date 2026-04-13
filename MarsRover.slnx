@@ -1,4 +1,13 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".github/pull_request_template.md" />
+    <File Path=".github/workflows/build-and-test.yml" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="README.md" />
+  </Folder>
   <Project Path="MarsRover.Console/MarsRover.Console.csproj" />
   <Project Path="MarsRover.Tests/MarsRover.Tests.csproj" />
 </Solution>
