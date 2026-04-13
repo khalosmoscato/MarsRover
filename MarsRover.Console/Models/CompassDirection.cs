@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MarsRover.Console;
+namespace MarsRover.Console.Models;
 
-internal enum CompassDirection
+public enum CompassDirection
 {
     North,
     East,

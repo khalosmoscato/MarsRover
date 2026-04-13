@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MarsRover.Console;
+namespace MarsRover.Console.Models;
 
-internal enum Instruction
+public enum Instruction
 {
     L,
     R,
