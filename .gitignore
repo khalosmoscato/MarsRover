@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Husky
+.husky/_
+
+# OS files
+.DS_Store
+Thumbs.db
