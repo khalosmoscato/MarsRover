@@ -1,7 +1,7 @@
 ﻿using MarsRover.Console.Models;
 using MarsRover.Console.Parsers;
 
-namespace MarsRover.Tests;
+namespace MarsRover.Tests.Parsers;
 
 public class InstructionParserTests
 {
@@ -45,7 +45,7 @@ public class InstructionParserTests
     public void ParseInstruction_ShouldReturnCorrectCount_WhenValidInputProvided(string input, int expectedCount)
     {
         var result = InstructionParser.ParseInstruction(input);
-        Assert.That(result.Count, Is.EqualTo(expectedCount));
+        Assert.That(result, Has.Count.EqualTo(expectedCount));
     }
 
     [Test]

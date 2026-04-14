@@ -1,6 +1,6 @@
 ﻿using MarsRover.Console.Models;
 using MarsRover.Console.Parsers;
-namespace MarsRover.Tests.Parser;
+namespace MarsRover.Tests.Parsers;
 
 public class PlateauSizeParserTests
 {
@@ -13,8 +13,8 @@ public class PlateauSizeParserTests
     }
 
     [TestCase("5,5")]
-    [TestCase("5,Y")]
-    [TestCase("X,5")]
+    [TestCase("5 Y")]
+    [TestCase("X 5")]
     [TestCase("X Y")]
     [TestCase("5")]
     [TestCase("5 5 5")]

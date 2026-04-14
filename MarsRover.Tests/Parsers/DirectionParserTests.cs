@@ -1,7 +1,7 @@
 ﻿using MarsRover.Console.Models;
 using MarsRover.Console.Parsers;
 
-namespace MarsRover.Tests;
+namespace MarsRover.Tests.Parsers;
 
 public class DirectionParserTests
 {
