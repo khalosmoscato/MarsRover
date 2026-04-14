@@ -6,6 +6,10 @@ A robust .NET terminal application for navigating rovers across the Martian plat
 
 This project is built with a focus on modern C# standards and automated quality assurance.
 
+### 🧩 Layered Design
+- **Domain Layer**: Strong typing using `Records` and `Enums` ensures data integrity across the application.
+- **Input Layer**: Robust parsing logic with 100% TDD coverage. This layer validates, trims, and normalises raw string inputs before they reach the core logic, preventing "garbage-in, garbage-out" scenarios.
+
 ### 🏗️ Global Configuration
 - **Directory.Build.props**: Centralized project configuration to ensure consistent Target Framework (.NET 10), Nullable reference types, and Implicit Usings across all projects.
 - **Strict Warnings**: `TreatWarningsAsErrors` is enabled globally to maintain a zero-warning codebase.
@@ -27,7 +31,12 @@ csharp-mars-rover/
 │   ├── workflows/             # CI/CD Automation scripts
 │   └── pull_request_template.md
 ├── MarsRover.Console/         # Main Entry Point (Terminal UI)
+│   ├── Models/                # Domain entities (Enums, Records)
+│   ├── Parsers/               # Input Layer (String-to-Type conversion)
+│   └── Program.cs             # Entry Point logic
 ├── MarsRover.Tests/           # NUnit Test Suite
+│   ├── Parsers/               # Comprehensive unit tests for all parsers
+│   └── ...
 ├── .husky/                    # Local Git Hook configurations
 ├── Directory.Build.props      # Global MSBuild settings
 ├── MarsRover.slnx             # Visual Studio Solution

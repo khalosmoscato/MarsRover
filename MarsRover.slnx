@@ -5,6 +5,9 @@
     <File Path=".github/pull_request_template.md" />
     <File Path=".github/workflows/build-and-test.yml" />
     <File Path=".gitignore" />
+    <File Path=".husky/commit-msg" />
+    <File Path=".husky/pre-commit" />
+    <File Path=".husky/task-runner.json" />
     <File Path="Directory.Build.props" />
     <File Path="README.md" />
   </Folder>
