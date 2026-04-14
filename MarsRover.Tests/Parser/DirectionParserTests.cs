@@ -5,11 +5,6 @@ namespace MarsRover.Tests;
 
 public class DirectionParserTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
     [TestCase('N', CompassDirection.North)]
     [TestCase('E', CompassDirection.East)]
     [TestCase('S', CompassDirection.South)]

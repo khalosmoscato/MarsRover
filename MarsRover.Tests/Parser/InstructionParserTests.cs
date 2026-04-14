@@ -5,10 +5,6 @@ namespace MarsRover.Tests;
 
 public class InstructionParserTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
     [Test]
     public void ParseInstruction_ShouldReturnEmptyList_WhenPassedWhiteSpace()
     {
@@ -45,7 +41,7 @@ public class InstructionParserTests
 
     [TestCase("LMR", 3)]
     [TestCase("MMMMM", 5)]
-    [TestCase("", 0)] 
+    [TestCase("", 0)]
     public void ParseInstruction_ShouldReturnCorrectCount_WhenValidInputProvided(string input, int expectedCount)
     {
         var result = InstructionParser.ParseInstruction(input);
@@ -57,7 +53,8 @@ public class InstructionParserTests
     {
         var result = InstructionParser.ParseInstruction("MRL");
 
-        Assert.Multiple(() => {
+        Assert.Multiple(() =>
+        {
             Assert.That(result[0], Is.EqualTo(Instruction.M));
             Assert.That(result[1], Is.EqualTo(Instruction.R));
             Assert.That(result[2], Is.EqualTo(Instruction.L));
@@ -77,7 +74,8 @@ public class InstructionParserTests
     public void ParseInstruction_ShouldIgnoreWhiteSpaces_WhenGivenStringWithAMixOfCharsAndWhiteSpaces()
     {
         var result = InstructionParser.ParseInstruction("R R L");
-        Assert.Multiple(() => {
+        Assert.Multiple(() =>
+        {
             Assert.That(result[0], Is.EqualTo(Instruction.R));
             Assert.That(result[1], Is.EqualTo(Instruction.R));
             Assert.That(result[2], Is.EqualTo(Instruction.L));
