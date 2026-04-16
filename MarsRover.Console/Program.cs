@@ -1,5 +1,4 @@
-﻿using MarsRover.Console.Models;
-using MarsRover.Console.Parsers;
+﻿using MarsRover.Console.Parsers;
 
 string plateau1 = "5 5";
 string roverPosition = "1 2 N";
